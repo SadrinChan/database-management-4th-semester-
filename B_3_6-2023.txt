@@ -4,3 +4,63 @@
 -SELECT designation FROM employees;
 -SELECT designation, gender FROM employees
  WHERE gender='Male';
+-SELECT department, gender FROM employees
+ WHERE department='Computer Science and Engineering';
+-SELECT department, gender FROM employees
+ WHERE department='Computer Science and Engineering'
+ AND gender='Female';
+-SELECT department,designation, gender FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer';
+-SELECT designation FROM employees
+ WHERE designation='professor'
+ OR designation='Software Developer';
+-SELECT department,CONCAT(first_name,' ',last_name) AS full_name, designation, gender FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer';
+-SELECT department,CONCAT(first_name,' ',last_name) AS full_name,CONCAT(email,' ',address) AS email_address, designation, gender FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer';
+-SELECT department,CONCAT(first_name,' ',last_name) AS full_name,email AS email_address, designation, gender FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer';
+-SELECT salary FROM employees
+WHERE salary= 172000;
+-SELECT salary FROM employees
+WHERE salary BETWEEN 172000 AND 200000;
+-SELECT department,designation, gender, salary FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer'
+AND salary BETWEEN 172000 AND 200000
+ORDER BY salary ASC;
+-SELECT department,CONCAT(first_name,' ',last_name) AS full_name, designation, gender FROM employees
+WHERE department='Computer Science and Engineering'
+AND gender='Female'
+AND designation='Software Developer'
+ORDER BY full_name DESC;
+-SELECT DISTINCT (country) FROM employees;
+-SELECT DISTINCT (designation) FROM employees;
+-SELECT first_name, last_name, country FROM employees
+WHERE country='Germany'
+OR country='France'
+OR country='Italy';
+-SELECT first_name, last_name, country FROM employees
+WHERE country IN('Germany','France','Italy');
+
+
+-SELECT first_name, last_name, designation FROM employees
+WHERE designation NOT IN('software developer','professor');
+
+-SELECT first_name, last_name FROM employees
+WHERE first_name LIKE 'A%o';
+-SELECT first_name, last_name FROM employees
+WHERE last_name LIKE '%dem%';
+-SELECT first_name, last_name FROM employees
+WHERE last_name LIKE 'dem%';
+-SELECT first_name, last_name FROM employees
+WHERE last_name LIKE '__r%';
