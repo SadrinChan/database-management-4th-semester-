@@ -1,0 +1,12 @@
+DROP DATABASE dmsl_b_db;
+CREATE DATABASE dmsl_b_db;
+DROP TABLE student;
+
+CREATE TABLE teachers(
+    id mediumint,
+    first_name varchar(100),
+    last_name varchar(100),
+    date_of_birth varchar(20),
+    phone varchar(20)
+);
+DROP TABLE teachers;

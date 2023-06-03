@@ -1,0 +1,6 @@
+-SELECT * FROM employees;
+-SELECT id,first_name,last_name,email FROM employees;
+-SELECT  address,country,city FROM employees;
+-SELECT designation FROM employees;
+-SELECT designation, gender FROM employees
+ WHERE gender='Male';
