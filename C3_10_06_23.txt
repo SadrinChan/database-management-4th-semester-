@@ -1,0 +1,30 @@
+-https://www.w3schools.com/sql/sql_ref_mysql.asp
+-SELECT ADDDATE("2023-06-10", INTERVAL 15 DAY);  
+-SELECT ADDDATE(CURDATE(), INTERVAL 15 DAY);
+-SELECT first_name, last_name, joining_date, MONTHNAME(joining_date) FROM employees
+WHERE MONTHNAME(joining_date)="June";
+-SELECT first_name, last_name, joining_date, MONTHNAME(joining_date) FROM employees
+WHERE MONTHNAME(joining_date) IN("June","September","February");
+-SELECT first_name, last_name, birth_date, DATE_FORMAT(birth_date, "%D %M, %Y") AS formated_birth_date FROM employees;
+-SELECT COUNT(*) FROM employees
+WHERE MONTHNAME(joining_date) IN("June","September","February");
+-SELECT COUNT(joining_date) FROM employees
+ WHERE department='Computer Science and Engineering'
+ AND MONTHNAME(birth_date)="June";
+-SELECT  avg(salary) FROM employees
+ WHERE MONTHNAME(birth_date)="June" AND department='Computer Science and Engineering';
+-SELECT  max(salary) FROM employees
+ WHERE MONTHNAME(birth_date)="June" AND department='Computer Science and Engineering';
+SELECT  min(salary) FROM employees
+ WHERE MONTHNAME(birth_date)="June" AND department='Computer Science and Engineering';
+-SELECT  sum(salary) FROM employees
+ WHERE MONTHNAME(birth_date)="June" AND department='Computer Science and Engineering';
+-SELECT  department, max(salary) FROM employees
+ GROUP BY department;
+-SELECT  department, sum(salary) FROM employees
+ GROUP BY department;
+-SELECT  department, count(*) FROM employees
+ GROUP BY department;
+-SELECT  department, MIN(salary) FROM employees
+
+ GROUP BY department HAVING MIN(salary)>8100;
