@@ -1,0 +1,7 @@
+CREATE TABLE teachers(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(30),
+email varchar(30),
+salary int,
+department varchar(20)
+);
