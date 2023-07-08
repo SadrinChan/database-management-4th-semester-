@@ -1,4 +1,4 @@
-connection.php
+(connection.php)
 <?php 
 $username = "root";
 $password = "";
@@ -15,7 +15,7 @@ if (!$conn) {
 ?>
 
 
-delete.php
+(delete.php)
 <?php include 'connection.php'; ?>
 <?php 
     $teacher_id = $_REQUEST['tId'];
@@ -25,7 +25,7 @@ delete.php
     }
 ?>
 
-edit.php
+(edit.php)
 <?php include 'connection.php'; ?>
 <?php 
     $t_id = $_REQUEST['tId'];
@@ -92,7 +92,7 @@ edit.php
 
 ?>
 
-index.php
+(index.php)
 <?php include 'connection.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -151,7 +151,7 @@ index.php
 
 ?>
 
-teachers.php
+(teachers.php)
 <?php include 'connection.php'; ?>
 <?php
     $str = "select * from teachers";
@@ -225,7 +225,7 @@ teachers.php
 </body>
 </html>
 
-db.txt
+(db.txt)
 create table teachers(
     id int primary key auto_increment,
     name varchar(30),
